@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Character from '../views/Character.vue';
+import Commission from '../views/Commission.vue';
 
 Vue.use(VueRouter);
 
@@ -21,7 +23,12 @@ const routes = [
   {
     path: '/character',
     name: 'Character',
-    component: () => import('../views/Character.vue'),
+    component: Character,
+  },
+  {
+    path: '/Commission',
+    name: 'Commission',
+    component: Commission,
   },
 ];
 
