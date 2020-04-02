@@ -7,7 +7,17 @@
       v-for="ch in chars"
       :key="ch.name"
       :ch="ch"
+      v-b-modal.charamodal
     />
+    <b-modal
+      id="charamodal"
+      size="lg"
+      ok-only
+      ok-title="閉じる"
+      >
+      <h2>キャラクター名</h2>
+      <p>ここに詳細が表示されます</p>
+    </b-modal>
   </div>
 </template>
 
@@ -29,7 +39,8 @@ export default {
           url: require('@/assets/caImage1.png'), // eslint-disable-line global-require
           name: 'ヘルミュー',
           engname: 'Helmue',
-          summary: '簡単な紹介文',
+          summary: `簡単な紹介文
+二行目の説明`,
         },
         {
           url: require('@/assets/caImage2.png'), // eslint-disable-line global-require
@@ -41,18 +52,6 @@ export default {
           url: require('@/assets/caImage3.png'), // eslint-disable-line global-require
           name: 'ブルーバード',
           engname: 'Bluebird',
-          summary: '',
-        },
-        {
-          url: '',
-          name: 'ペリドート',
-          engname: 'Peridort',
-          summary: '',
-        },
-        {
-          url: '',
-          name: 'ポリエス',
-          engname: 'Polies',
           summary: '',
         },
       ],

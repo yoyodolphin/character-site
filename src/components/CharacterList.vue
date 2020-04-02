@@ -57,6 +57,8 @@
     }
     > .summary{
       margin: 0 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
     }
   }
 }
