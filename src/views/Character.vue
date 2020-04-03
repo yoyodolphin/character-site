@@ -7,17 +7,7 @@
       v-for="ch in chars"
       :key="ch.name"
       :ch="ch"
-      v-b-modal.charamodal
     />
-    <b-modal
-      id="charamodal"
-      size="lg"
-      ok-only
-      ok-title="閉じる"
-      >
-      <h2>キャラクター名</h2>
-      <p>ここに詳細が表示されます</p>
-    </b-modal>
   </div>
 </template>
 
