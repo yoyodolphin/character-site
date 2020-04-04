@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="chara-list" v-b-modal.charamodal>
+    <div class="chara-list">
       <div class="left-col">
         <img class="chara-img" :src="ch.url">
       </div>
@@ -12,15 +12,6 @@
         <p class="summary">{{ ch.summary }}</p>
       </div>
     </div>
-    <b-modal
-      id="charamodal"
-      size="lg"
-      ok-only
-      ok-title="閉じる"
-      >
-      <h2>キャラクター名</h2>
-      <p>ここに詳細が表示されます</p>
-    </b-modal>
   </div>
 </template>
 
@@ -40,6 +31,7 @@
     > .chara-img{
       max-width: 20vw;
       max-height: 20vw;
+      border: 1px solid;
     }
   }
   > .right-col {

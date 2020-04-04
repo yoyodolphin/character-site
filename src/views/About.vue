@@ -3,7 +3,7 @@
     <div class="profile">
       <h1>プロフィール</h1>
         <div class="profile-content">
-          <img src="../assets/profileImage.jpg">
+          <img src="../assets/profile_image.jpg">
           <div class="profile-text">
             <h2>ヨーヨー / yoyo</h2>
             <p>ケモノや人外メインな絵描き。つるぷにやフェチ寄り(粘液、ラバーetc...)なイラストが多目。<br>

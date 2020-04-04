@@ -8,6 +8,8 @@
 
     <h3>コミッションの流れ</h3>
     <p>コミッションのやり取りは以下のようになります。</p>
+
+    <CharacterList/>
   </div>
 </template>
 
@@ -21,3 +23,14 @@
     margin: 20px 50px;
   }
 </style>
+
+<script type="text/javascript">
+import CharacterList from '@/components/CharacterList.vue';
+
+export default {
+  name: 'character',
+  components: {
+    CharacterList,
+  },
+};
+</script>
