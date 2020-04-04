@@ -1,14 +1,37 @@
 <template>
-  <div class="modal">
-    <h1>キャラクター名</h1>
+  <div class="overlay">
+    <div class="modal">
+      <div class="modal-header">
+      </div>
+      <div class="modal-content">
+        <h1>{{ chr.name }}</h1>
+        <p>ここにキャラクターのプロフィールを載せる</p>
+      </div>
+      <div class="modal-footer">
+        <b-button>閉じる</b-button>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.modal {
-  width: 100%;
-  height: 100%;
-  background: #000;
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(0,0,0,0.5);
+  > .modal{
+    z-index: 2;
+    width: 70vw;
+    padding: 1em;
+    background: #fff;
+  }
 }
 </style>
 
@@ -16,7 +39,7 @@
 export default {
   name: 'CharacterModal',
   props: {
-    ch: {
+    chr: {
       type: Object,
       required: true,
     },
