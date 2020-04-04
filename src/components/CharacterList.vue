@@ -6,7 +6,6 @@
       </div>
       <div class="right-col">
         <div class="name">
-          <div>{{ ch.index }}</div>
           <div class="chara-name">{{ ch.name }}</div>
           <div class="eng-chara-name">{{ ch.engname }}</div>
         </div>

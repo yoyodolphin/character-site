@@ -1,54 +1,43 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-
-    <b-button size="lg"
-      variant="outline-primary">
-      Test Button</b-button>
-<br>
-<br>
-    <p>ギャラリー <b-badge> New </b-badge></p>
-<br>
-<br>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width=50%
-      img-height=50%
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-      >
-
-       <b-carousel-slide
-         caption="First slide">
-         <template v-slot:img>
-           <img
-             src="@/assets/caImage1.png">
-         </template>
-       </b-carousel-slide>
-
-       <b-carousel-slide
-         caption="Second slide">
-         <template v-slot:img>
-           <img
-             src="@/assets/caImage2.png">
-         </template>
-       </b-carousel-slide>
-
-       <b-carousel-slide
-         caption="Third slide">
-         <template v-slot:img>
-           <img
-             src="@/assets/caImage3.png">
-         </template>
-       </b-carousel-slide>
-
-   </b-carousel>
-
+    <div class="profile">
+      <h1>プロフィール</h1>
+        <div class="profile-content">
+          <img src="../assets/profileImage.jpg">
+          <div class="profile-text">
+            <h2>ヨーヨー / yoyo</h2>
+            <p>ケモノや人外メインな絵描き。つるぷにやフェチ寄り(粘液、ラバーetc...)なイラストが多目。<br>
+               グッズ制作や着ぐるみなど、自由気ままにいろんな物に手を出しています。
+            </p>
+          </div>
+        </div>
+      </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+.profile{
+  width: 90vw;
+  margin: 5vw 5vw;
+  background-color: #fff;
+  > h1{
+    margin-bottom: 5vw;
+    text-align: left;
+    border-left: 6px solid;
+    border-bottom: 2px solid;
+  }
+  > .profile-content {
+    display: flex;
+    justify-content: center;
+    > .profile-text{
+      text-align: left;
+      margin-left: 5vw;
+      }
+    }
+  }
+img {
+      width: 15vw;
+      height: 15vw;
+      border: 2px solid;
+    }
+</style>
