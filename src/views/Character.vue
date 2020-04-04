@@ -3,6 +3,7 @@
     <h1>My original characters</h1>
     <p>You can click links and see character sheets</p>
     <p>キャラクターの名前をクリックすると資料が閲覧できます。</p>
+    <CharacterModal/>
     <CharacterList
       v-for="ch in chars"
       :key="ch.name"
@@ -16,11 +17,13 @@
 
 <script type="text/javascript">
 import CharacterList from '@/components/CharacterList.vue';
+import CharacterModal from '@/components/CharacterModal.vue';
 
 export default {
   name: 'Character',
   components: {
     CharacterList,
+    CharacterModal,
   },
   data: () => (
     {

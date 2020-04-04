@@ -1,26 +1,18 @@
 <template>
   <div>
-    <div class="chara-list" v-b-modal.charamodal>
+    <div class="chara-list">
       <div class="left-col">
         <img class="chara-img" :src="ch.url">
       </div>
       <div class="right-col">
         <div class="name">
+          <div>{{ ch.index }}</div>
           <div class="chara-name">{{ ch.name }}</div>
           <div class="eng-chara-name">{{ ch.engname }}</div>
         </div>
         <p class="summary">{{ ch.summary }}</p>
       </div>
     </div>
-    <b-modal
-      id="charamodal"
-      size="lg"
-      ok-only
-      ok-title="閉じる"
-      >
-      <h2>キャラクター名</h2>
-      <p>ここに詳細が表示されます</p>
-    </b-modal>
   </div>
 </template>
 
