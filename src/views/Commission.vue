@@ -17,11 +17,11 @@
   h1{
     margin: 15px;
   }
-
   .pageline{
     border-top: 1px dotted;
     margin: 20px 50px;
   }
+<<<<<<< Updated upstream
 </style>
 
 <script type="text/javascript">
@@ -33,4 +33,6 @@ export default {
     CharacterList,
   },
 };
+=======
+>>>>>>> Stashed changes
 </script>

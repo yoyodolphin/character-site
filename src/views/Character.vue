@@ -3,17 +3,29 @@
     <h1>My original characters</h1>
     <p>You can click links and see character sheets</p>
     <p>キャラクターの名前をクリックすると資料が閲覧できます。</p>
+<<<<<<< Updated upstream
     <p v-if="showContent">あああああ</p>
     <b-button @click="openModal">on</b-button>
     <b-button @click="closeModal">off</b-button>
+=======
+>>>>>>> Stashed changes
     <CharacterList
       v-for="ch in chars"
       :key="ch.name"
       :ch="ch"
+<<<<<<< Updated upstream
       @click="openModal"
     />
     <CharacterModal
       :chr="chr"
+=======
+      @child-list-event="parentMethod"
+    />
+    <CharacterModal
+      :chm="chars"
+      :val="parentData"
+      @child-event="parentMethod"
+>>>>>>> Stashed changes
     />
   </div>
 </template>
@@ -54,6 +66,7 @@ export default {
           summary: '',
         },
       ],
+<<<<<<< Updated upstream
       showContent: false,
     }
   ),
@@ -62,6 +75,15 @@ export default {
   },
   closeModal: () => {
     this.showContent = false;
+=======
+      parentData: 'true',
+    }
+  ),
+  methods: {
+    parentMethod(fromChildVal) {
+      this.parentData = fromChildVal;
+    },
+>>>>>>> Stashed changes
   },
 };
 </script>

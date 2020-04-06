@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="chara-list">
+    <div class="chara-list" @click="triggerEvent">
       <div class="left-col">
         <img class="chara-img" :src="ch.url">
       </div>
@@ -76,6 +76,16 @@ export default {
     ch: {
       type: Object,
       required: true,
+    },
+  },
+  data: () => (
+    {
+      parentData: false,
+    }
+  ),
+  methods: {
+    triggerEvent() {
+      this.$emit('child-list-event', false);
     },
   },
 };
