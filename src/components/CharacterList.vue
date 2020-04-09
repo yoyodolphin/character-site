@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div @click="sendEvent">
     <div class="chara-list" @click="triggerEvent">
       <div class="left-col">
         <img class="chara-img" :src="ch.url">
@@ -11,6 +12,7 @@
         </div>
         <p class="summary">{{ ch.summary }}</p>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -78,14 +80,12 @@ export default {
       required: true,
     },
   },
-  data: () => (
-    {
-      parentData: false,
-    }
-  ),
   methods: {
     triggerEvent() {
-      this.$emit('child-list-event', false);
+      this.$emit('list-event', false);
+    },
+    sendEvent() {
+      this.$emit('send-id', this.ch.id);
     },
   },
 };

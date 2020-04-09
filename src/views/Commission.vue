@@ -21,18 +21,4 @@
     border-top: 1px dotted;
     margin: 20px 50px;
   }
-<<<<<<< Updated upstream
-</style>
-
-<script type="text/javascript">
-import CharacterList from '@/components/CharacterList.vue';
-
-export default {
-  name: 'character',
-  components: {
-    CharacterList,
-  },
-};
-=======
->>>>>>> Stashed changes
 </script>
