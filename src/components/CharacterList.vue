@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="chara-list">
+    <div @click="sendEvent">
+    <div class="chara-list" @click="triggerEvent">
       <div class="left-col">
         <img class="chara-img" :src="ch.url">
       </div>
@@ -11,6 +12,7 @@
         </div>
         <p class="summary">{{ ch.summary }}</p>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -31,6 +33,7 @@
     > .chara-img{
       max-width: 20vw;
       max-height: 20vw;
+      border: 1px solid;
     }
   }
   > .right-col {
@@ -66,6 +69,19 @@
 .chara-list:hover{
   opacity: 0.5;
 }
+
+@media screen and (min-width: tabletMinWidth) and (max-width: 1024px) {
+  .chara-list {
+    background-color: #e55;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .chara-list {
+    background-color: #55e;
+  }
+}
+
 </style>
 
 <script type="text/javascript">
@@ -75,6 +91,14 @@ export default {
     ch: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    triggerEvent() {
+      this.$emit('list-event', false);
+    },
+    sendEvent() {
+      this.$emit('send-id', this.ch.id);
     },
   },
 };

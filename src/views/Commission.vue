@@ -8,6 +8,8 @@
 
     <h3>コミッションの流れ</h3>
     <p>コミッションのやり取りは以下のようになります。</p>
+
+    <CharacterList/>
   </div>
 </template>
 
@@ -15,9 +17,8 @@
   h1{
     margin: 15px;
   }
-
   .pageline{
     border-top: 1px dotted;
     margin: 20px 50px;
   }
-</style>
+</script>

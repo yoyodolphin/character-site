@@ -6,8 +6,16 @@
     <CharacterModal/>
     <CharacterList
       v-for="ch in chars"
-      :key="ch.name"
+      :key="ch.id"
       :ch="ch"
+      @list-event="parentMethod"
+      @send-id="getIndexMethod"
+    />
+    <CharacterModal
+      :chm="chars"
+      :val="parentData"
+      :listid="modalIdNum"
+      @modal-event="parentMethod"
     />
   </div>
 </template>
@@ -29,26 +37,39 @@ export default {
     {
       chars: [
         {
-          url: require('@/assets/caImage1.png'), // eslint-disable-line global-require
+          id: 0,
+          url: require('@/assets/chara_helmue.png'), // eslint-disable-line global-require
           name: 'ヘルミュー',
           engname: 'Helmue',
           summary: `簡単な紹介文
 二行目の説明`,
         },
         {
-          url: require('@/assets/caImage2.png'), // eslint-disable-line global-require
+          id: 1,
+          url: require('@/assets/chara_torot.png'), // eslint-disable-line global-require
           name: 'トロート',
           engname: 'Torot',
           summary: '',
         },
         {
-          url: require('@/assets/caImage3.png'), // eslint-disable-line global-require
+          id: 2,
+          url: require('@/assets/chara_bluebird.png'), // eslint-disable-line global-require
           name: 'ブルーバード',
           engname: 'Bluebird',
           summary: '',
         },
       ],
+      parentData: 'true',
+      modalIdNum: 0,
     }
   ),
+  methods: {
+    parentMethod(fromChildVal) {
+      this.parentData = fromChildVal;
+    },
+    getIndexMethod(idNum) {
+      this.modalIdNum = idNum;
+    },
+  },
 };
 </script>
