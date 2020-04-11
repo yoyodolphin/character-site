@@ -69,6 +69,19 @@
 .chara-list:hover{
   opacity: 0.5;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .chara-list {
+    background-color: #e55;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .chara-list {
+    background-color: #55e;
+  }
+}
+
 </style>
 
 <script type="text/javascript">
