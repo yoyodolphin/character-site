@@ -1,85 +1,40 @@
 <template>
   <div>
     <div @click="sendEvent">
-    <div class="chara-list" @click="triggerEvent">
-      <div class="left-col">
-        <img class="chara-img" :src="ch.url">
-      </div>
-      <div class="right-col">
-        <div class="name">
-          <div class="chara-name">{{ ch.name }}</div>
-          <div class="eng-chara-name">{{ ch.engname }}</div>
+      <div class="chara-list" @click="triggerEvent">
+        <div class="chara-image">
+          <img :src="ch.url">
         </div>
-        <p class="summary">{{ ch.summary }}</p>
+        <div class="chara-name">
+          <p>{{ ch.name }}</p>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.chara-list{
-  display: flex;
+.chara-list {
   margin: 10px auto;
-  width: 90vw;
-  height: 20vw;
+  width: 150px;
+  height: 200px;
   transition: .5s;
   cursor: pointer;
-  > .left-col {
+  > .chara-image {
     display: inline-block;
-    width: 20vw;
-    height: 20vw;
-    background-color: #00b8ff;
-    > .chara-img{
-      max-width: 20vw;
-      max-height: 20vw;
-      border: 1px solid;
-    }
-  }
-  > .right-col {
-    display: inline-block;
-    width: 70vw;
-    height: 20vw;
-    border: 1px solid #000080;
-    text-align: left;
-    > .name {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 10px;
-      color: #696969;
-      border-bottom: 1px dashed;
-      > .chara-name{
-      font-size: 5vw;
-      }
-      > .eng-chara-name {
-        margin-left: 2vw;
-        font-size: 3vw;
-        color: #c0c0c0;
-      }
-    }
-    > .summary{
-      margin: 0 10px;
-      white-space: pre-wrap;
-      word-wrap: break-word;
+    max-width: 150px;
+    max-height: 150px;
+    > img {
+      max-width: 150px;
+      max-height: 150px;
+      border-radius: 50%;
+      border: solid 3px #000038;
     }
   }
 }
 
 .chara-list:hover{
   opacity: 0.5;
-}
-
-@media screen and (min-width: tabletMinWidth) and (max-width: 1024px) {
-  .chara-list {
-    background-color: #e55;
-  }
-}
-
-@media screen and (min-width: 1024px){
-  .chara-list {
-    background-color: #55e;
-  }
 }
 
 </style>
@@ -95,6 +50,8 @@ export default {
   },
   methods: {
     triggerEvent() {
+      const scrollReset = document.getElementsByClassName('cha-modal-window')[0];
+      scrollReset.scrollTop = 0;
       this.$emit('list-event', false);
     },
     sendEvent() {
