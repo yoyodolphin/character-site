@@ -15,7 +15,6 @@
     <CharacterModal
       :chm="chars"
       :val="parentData"
-      :secval="secval"
       :listid="modalIdNum"
       @modal-event="parentMethod"
     />
@@ -23,13 +22,6 @@
 </template>
 
 <style scoped lang="scss">
-.fixed {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-}
 h2 {
   margin: 5vw 5vw 0 5vw;
   text-align: left;
@@ -298,21 +290,16 @@ export default {
         },
       ],
       parentData: 'true',
-      secval: 'false',
       modalIdNum: 0,
     }
   ),
   methods: {
     parentMethod(fromChildVal) {
       this.parentData = fromChildVal;
-    //  this.secval = !fromChildVal;
     },
     getIndexMethod(idNum) {
-    /*  const scrollVal = document.documentElement.scrollTop;
-      const elements = document.getElementsByClassName('character');
-      const scrollPosition = scrollVal;
-      elements[0].classList.add('fixed');
-      elements[0].style.top = -scrollPosition; */
+      const elements = document.body;
+      elements.classList.add('modal-active');
       this.modalIdNum = idNum;
     },
   },
