@@ -14,13 +14,12 @@
             <p>ここに立ち絵を表示</p>
           </div>
           <div class="chara-content-status">
-            <p>性別：</p>
-            <p>誕生日：</p>
-            <p>種族：</p>
-            <p>能力：</p>
+            <p>性別：{{ gen[chm[listid].gender] }}</p>
+            <p>誕生日：{{ chm[listid].birth[0] }}/{{ chm[listid].birth[1] }}</p>
+            <p>種族：{{ families[chm[listid].family[0]] }} {{ families[chm[listid].family[1]] }}</p>
+            <p>能力：{{ abi[chm[listid].ability[0]] }} {{ abi[chm[listid].ability[1]] }}</p>
           </div>
           <div class="chara-content-sentence">
-            <p>ここにキャラクターの解説が入ります</p>
             <p>{{ chm[listid].summary }}</p>
           </div>
         </div>
@@ -185,6 +184,7 @@
     > .cha-modal-content {
       text-align: left;
       > .chara-content-name {
+        margin-bottom: 30px;
         > h2 {
           margin: 0 3vw;
         }
@@ -196,20 +196,25 @@
       }
       > .chara-content-image {
         width: 600px;
-        height: 300px;
+        height: 600px;
         margin: 10px auto;
         border: 1px solid;
       }
       > .chara-content-status {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin: 0 3vw;
         > p {
           border-bottom: 1px dotted;
+          width: 35vw;
+          margin: 10px 0;
         }
       }
       > .chara-content-sentence {
         padding-top: 10px;
         border-top: 1px solid;
-        margin: 0 3vw;
+        margin: 20px 3vw 0 3vw;
       }
     }
     > .cha-modal-footer {
@@ -234,9 +239,20 @@ export default {
     listid: {
       type: Number,
     },
+    families: {
+      type: Object,
+    },
+    abi: {
+      type: Object,
+    },
+    gen: {
+      type: Object,
+    },
   },
   methods: {
     triggerEvent() {
+      const elements = document.body;
+      elements.classList.remove('modal-active');
       this.$emit('modal-event', true);
     },
   },

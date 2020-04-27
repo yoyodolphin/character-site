@@ -33,6 +33,10 @@ export default {
   color: #2c3e50;
 }
 
+.modal-active {
+  overflow: hidden;
+}
+
 #nav {
 
   a {
