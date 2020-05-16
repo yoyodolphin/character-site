@@ -1,38 +1,56 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-mocha" target="_blank" rel="noopener">unit-mocha</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress" target="_blank" rel="noopener">e2e-cypress</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div class="home-content">
+      <div class="home-summary">
+        <p>サイトの概要</p>
+      </div>
+      <p>ヨーヨーが個人で運営しているウェブサイトです。<br>
+      主に一次創作のギャラリーやキャラクター紹介、コミッションの受付情報などを掲載しています。</p>
+      <div class="home-information">
+        <div class="home-news">
+          <p>更新履歴</p>
+        </div>
+        <div class="home-twitter-widget">
+          <p>ツイッターウィジェット</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
+<style scoped lang="scss">
+.home-content {
+  margin: 50px 5vw;
+  > p {
+    padding-bottom: 50px;
+    border-bottom: 1px solid;
+  }
+  > .home-summary {
+    > p {
+      width: 200px;
+      height: 50px;
+      margin: 0 auto;
+      vertical-align: middle;
+      border: 1px dotted;
+    }
+  }
+  > .home-information {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    > .home-news {
+      width: 40vw;
+      height: 300px;
+      border: 1px solid;
+    }
+    > .home-twitter-widget{
+      width: 40vw;
+      height: 300px;
+      border: 1px solid;
+    }
+  }
+}
+</style>
 
 <script>
 export default {
@@ -42,21 +60,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
