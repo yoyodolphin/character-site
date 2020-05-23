@@ -43,6 +43,7 @@ p{
     right: 5px;
     bottom: 80px;
     text-align: right;
+    z-index: 1;
     > .word-fir {
       color: #fff;
     }
