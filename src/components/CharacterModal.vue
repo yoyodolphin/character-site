@@ -11,7 +11,7 @@
             <p>{{ chm[listid].engname }}</p>
           </div>
           <div class="chara-content-image">
-            <p>ここに立ち絵を表示</p>
+            <p>NoImage</p>
           </div>
           <div class="chara-content-status">
             <p>性別：{{ gen[chm[listid].gender] }}</p>
@@ -207,7 +207,7 @@
         margin: 0 3vw;
         > p {
           border-bottom: 1px dotted;
-          width: 35vw;
+          width: 49%;
           margin: 10px 0;
         }
       }

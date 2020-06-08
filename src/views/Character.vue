@@ -25,6 +25,12 @@
 </template>
 
 <style scoped lang="scss">
+.character {
+  width: 90vw;
+  max-width: 900px;
+  margin: 0 auto 70px auto;
+}
+
 h2 {
   margin: 30px 5vw 10px;
   text-align: left;
@@ -41,8 +47,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90vw;
-  margin: 0 5vw;
   > .chara-list-content{
     margin: 0 2vw;
   }
