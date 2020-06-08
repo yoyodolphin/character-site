@@ -84,7 +84,7 @@
     </div>
     <h2>依頼フォーム</h2>
     <div class="com-form">
-      <p>現在は受付を行なっておりません。<br>再開時期などはtwitterをご確認お願いいたします。</p>
+      <p>現在は受付を行なっておりません。<br>再開時期はtwitterのご確認をお願いいたします。</p>
     </div>
   </div>
 </template>
@@ -136,9 +136,10 @@ h2 {
   > .com-price {
     margin-bottom: 50px;
     > .price-column {
-      margin: 10px 0 30px 0;
+      width: 90%;
+      margin: 10px auto 30px auto;
       img {
-        width: 85%;
+        width: 100%;
         border: solid 2px;
       }
     }
@@ -181,7 +182,7 @@ h2 {
 
 .com-summary {
   width: 90%;
-  margin: 0 5vw 50px 5vw;
+  margin: 0 auto 50px auto;
 }
 
 .com-info {
@@ -215,10 +216,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     > .price-column {
-      width: 33%;
+      width: 30%;
       margin: 10px 0 30px 0;
       img {
-        width: 85%;
+        width: 100%;
         border: solid 2px;
       }
     }
@@ -226,21 +227,21 @@ h2 {
   > .price-option {
     table {
       height: 150px;
-      margin: 20px 0 50px 0;
+      margin: 20px 0 100px 0;
     }
     tr {
       text-align: left;
       border-bottom: solid 1px;
     }
     > .price-pay {
-      margin: 20px 0 50px 0;
+      margin: 20px 0 100px 0;
     }
   }
 }
 
 .com-form {
   width: 90%;
-  margin: 30px auto;
+  margin: 30px auto 100px auto;
 }
 }
 
