@@ -3,8 +3,7 @@
     <div class="home-image">
       <img src="../assets/homeimage.png">
       <div class="word-image">
-        <p class="word-fir">Be smooth. Be shiny.</p>
-        <p class="word-sec">Dive into another world!</p>
+        <p class="words">Toy BOX</p>
       </div>
     </div>
     <div class="home-content">
@@ -15,7 +14,7 @@
       </div>
       <details>
         <summary>更新履歴</summary>
-          <p>1/1 webサイト公開</p>
+          <p>2020/01/01 webサイト公開</p>
       </details>
     </div>
   </div>
@@ -41,13 +40,10 @@ p{
     font-size: 20pt;
     position: relative;
     right: 5px;
-    bottom: 80px;
+    bottom: 40px;
     text-align: right;
     z-index: 1;
-    > .word-fir {
-      color: #fff;
-    }
-    > .word-sec {
+    > .words {
       font-weight: bold;
       color: #fff;
     }
@@ -92,12 +88,9 @@ p{
     font-size: 30pt;
     position: relative;
     right: 5px;
-    bottom: 120px;
+    bottom: 60px;
     text-align: right;
-    > .word-fir {
-      color: #fff;
-    }
-    > .word-sec {
+    > .words {
       font-weight: bold;
       color: #fff;
     }
