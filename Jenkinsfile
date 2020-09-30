@@ -4,7 +4,7 @@ pipeline {
   stages{
     stage('install') {
       steps {
-        sh '/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/mySiteNode/bin/npm install'
+        sh 'npm install'
       }
     }
     stage('test') {
