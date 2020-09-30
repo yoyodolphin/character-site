@@ -4,7 +4,7 @@ pipeline {
   stages{
     stage('install') {
       steps {
-        sh 'npm install'
+        sh 'cd /var/jenkins_home/workspace/characterwebSite/stage && npm install'
       }
     }
     stage('test') {
