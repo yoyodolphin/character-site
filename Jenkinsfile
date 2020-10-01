@@ -19,7 +19,7 @@ pipeline {
     }
     stage('deploy') {
       steps{
-        sh 'rsync -av /var/jenkins_home/workspace/characterWebSite/stage/dist/ yoyo@133.167.75.22:/var/https-portal/vhosts/yoyo-dolphin.com/'
+        sh 'rsync -av /var/jenkins_home/workspace/characterWebSite/stage/dist/ yoyo-dolphin.com:/var/https-portal/vhosts/yoyo-dolphin.com/'
       }
     }
   }
