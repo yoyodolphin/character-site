@@ -17,6 +17,7 @@
         <ul @click="clickLinkEve">
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/illust">Illust</router-link></li>
           <li><router-link to="/Character">Character</router-link></li>
           <li><router-link to="/Commission">Commission</router-link></li>
         </ul>
@@ -27,6 +28,7 @@
       <div id="nav" class="global-nav">
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
+        <router-link to="/illust">Illust</router-link>
         <router-link to="/Character">Character</router-link>
         <router-link to="/Commission">Commission</router-link>
       </div>

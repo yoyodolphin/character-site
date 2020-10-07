@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Illust from '../views/IllustGallery.vue';
 import Character from '../views/Character.vue';
 import Commission from '../views/Commission.vue';
 
@@ -19,6 +20,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+  },
+  {
+    path: '/illust',
+    name: 'Illust',
+    component: Illust,
   },
   {
     path: '/character',
