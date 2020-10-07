@@ -2,19 +2,24 @@ pipeline {
   agent any
   
   stages{
-    stage('test1') {
+    stage('install') {
       steps {
-        echo 'test1...'
+        sh 'npm install'
       }
     }
-    stage('test2') {
+    stage('test') {
       steps {
-        echo 'test2...'
+        sh 'npm run lint'
       }
     }
-    stage('test3') {
+    stage('build') {
       steps {
-        echo 'test3...'
+        sh 'npm run build'
+      }
+    }
+    stage('deploy') {
+      steps{
+        sh 'rsync -av /var/jenkins_home/workspace/characterWebSite/stage/dist/ yoyo-dolphin.com:/var/https-portal/vhosts/yoyo-dolphin.com/'
       }
     }
   }
